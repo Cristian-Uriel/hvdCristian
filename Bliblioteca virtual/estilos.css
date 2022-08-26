@@ -1,0 +1,294 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*background: #313D52;*/
+}
+
+.navegacion{
+  width: 1000px;
+  margin: 30px auto;
+  background: #FFF;
+}
+.navegacion ul{
+  list-style: none;
+}
+.menu > li{
+  position: relative;
+  display: inline-block;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 30px 20px;
+  color: #353535;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.menu li a:hover{
+  background: #CE7D35;
+  color: #FFF;
+  transition: all .3s;
+}
+
+/* Logo */
+.logo{
+  width: 8.5%;
+  height: 9%;
+  padding: 5px;
+  float: right;
+  margin: auto;
+  vertical-align: text-top;
+
+}
+/* Submenu */
+
+.submenu{
+  position: absolute;
+  background: #333333;
+  width: 120%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+.submenu li a{
+  display: block;
+  padding: 15px;
+  color: #FFF;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.menu li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*Estilos texto general*/
+
+.general{
+  width: 1000px;
+  margin: 100px auto;
+  background: #FFF;
+  font-family: sans-serif;
+  opacity: 65%;
+  border-top: 6px solid #77E8EA;
+}
+.general p{
+  padding: 10px;
+  opacity: 100%;
+}
+
+/*Estilos Biblioteca - Tabla*/
+
+#contenedor{
+  margin: 50px auto;
+  width: 1000px;
+}
+
+table{
+  background: #FFF;
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td{
+  padding: 20px;
+}
+
+thead{
+  background: #246355;
+  border-bottom: solid 5px #0F362D;
+  color: #FFF;
+}
+
+tr:nth-child(even){
+  background-color: #DDD;
+}
+
+tr:hover td{
+  background-color: #369681;
+  color: #FFF;
+}
+
+/* Imagenes */
+
+img{
+  padding: 10px;
+}
+
+/* Contenedor de imagenes */
+
+.cont_img{
+  width: 100%;
+  max-width: 1000px;
+  background: #FFF;
+  margin: 100px auto;
+  opacity: 80%;
+  padding: 20px;
+  border-top: 6px solid #77E8EA;
+}
+
+.cont_img h1{
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.cont_img img {
+  opacity: 100%;
+}
+.cont_img p{
+  text-align: justify;
+  height: auto;
+}
+.collage{
+  background: #CED4D3;
+  text-align: center;
+}
+.pendon{
+  width: 500px;
+  margin: 0px 250px;
+}
+
+/* Efecto Hover */
+
+.efecto_hover{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.efecto_hover figure{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px,15px,25px;
+  rgba(0,0,0,0.50);
+  cursor: pointer;
+}
+.efecto_hover figure img{
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+}
+
+.efecto_hover figure .capa{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(60,103,123,0.5);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+.efecto_hover figure:hover > .capa{
+  opacity: 1;
+  visibility: visible;
+}
+
+.efecto_hover figure:hover > .capa h3{
+  margin-top: 150px;
+  margin-bottom: 15px;
+}
+.efecto_hover figure:hover > img{
+  transform: scale(1.01);
+}
+.efecto_hover figure .capa h3{
+  color: #FFF;
+  font-weight: 400px;
+  margin-bottom: 120px;
+  transition: all 500ms ease-out;
+  margin-top: 30px;
+  font-size: 30px;
+}
+.efecto_hover figure .capa p{
+  color: #FFF;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+
+/* Formulario */
+.formulario{
+  width: 50%;
+  background: #24303C;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  color: #FFF;
+}
+.formulario h4{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.campos {
+  width: 100%;
+  background: #24303C;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1F53C5;
+  font-size: 18px;
+  color: #FFF;
+}
+
+.formulario .boton{
+  width: 100%;
+  background: #1F53C5;
+  border: none;
+  padding: 12px;
+  color: #FFF;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+/* Barra de inicio de sesion */
+#barra_sesion{
+  background: #FFF;
+  width: 1000px;
+  height: 40px;
+  margin: 30px auto;
+}
+#barra_sesion h4{
+  padding: 10px;
+  vertical-align: center;
+}
+
+/* Pie de Pagina */
+
+footer {
+  width: 1000px;
+  background: #95A1AF;
+  margin: 30px auto;
+}
+.pie{
+  padding: 10px;
+}
+
+.pie p{
+  text-align: center;
+}
